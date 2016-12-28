@@ -19,7 +19,14 @@ final class DownloadUtil: NSObject {
 
     func setup(delegate: ProgressDelegate?) {
 
-        let config = URLSessionConfiguration.default
+        //タイムアウトなし
+//        let config = URLSessionConfiguration.default
+
+        //タイムアウトあり
+        let config = URLSessionConfiguration.background(withIdentifier: "backgroundTask")
+        config.timeoutIntervalForRequest = 60
+        config.timeoutIntervalForResource = TimeInterval(60 * 60 * 24 * 7)
+
         session = Foundation.URLSession(configuration: config,
                                             delegate: self,
                                             delegateQueue: OperationQueue.main)
