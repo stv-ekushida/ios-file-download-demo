@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let manager = DownloadUtil()
-        manager.setup(delegate: self)
+        let manager = DownloadUtil(delegate: self)
         manager.start(urlString: urlString)
     }
 }

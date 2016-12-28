@@ -17,7 +17,8 @@ final class DownloadUtil: NSObject {
     private var session: URLSession?
     fileprivate var delegate: ProgressDelegate?
 
-    func setup(delegate: ProgressDelegate?) {
+    init(delegate: ProgressDelegate?) {
+        super.init()
 
         //タイムアウトなし
 //        let config = URLSessionConfiguration.default
