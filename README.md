@@ -1,5 +1,5 @@
 # ios-file-download-demo
-ios-ファイルをダンロードするサンプル
+ios-ファイルをダウンロード（進捗状況）するサンプル
 
 |category | Version| 
 |---|---|
